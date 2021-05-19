@@ -1,0 +1,69 @@
+% Standard Dokumenten Einstellungen
+\documentclass[a4paper, 12pt, parskip=half]{scrartcl}
+
+% --------------------
+% Grundlegende Dokumentenparameter
+\newcommand{\Subject}{Subject}
+\newcommand{\Title}{Title}
+\newcommand{\Subtitle}{Subtitle}
+\newcommand{\Author}{Max Mustermann}
+\newcommand{\Date}{DD.MM.YYYY}
+
+% --------------------
+% Packages und deren Konfigurations
+\input{config.tex}
+
+% --------------------
+% Start des Dokuments
+\begin{document}
+
+% --------------------
+% Titelblatt
+\input{sections/title.tex}
+
+% Inhaltsverzeichnis
+\tableofcontents
+
+% Abkürzungsverzeichnis
+% *** auskommentieren, wenn nicht verwendet ***
+\input{resources/acronyms.tex}
+\clearpage
+
+% --------------------
+\pagestyle{scrheadings}
+% Arabische Seitenzahlen
+\pagenumbering{arabic}
+
+\input{sections/introduction.tex}
+\input{sections/goals.tex}
+\input{sections/tenets.tex}
+\input{sections/state-of-the-business.tex}
+\input{sections/lessons-learned.tex}
+\input{sections/strategic-priorities.tex}
+\clearpage
+
+% --------------------
+% Römische Seitenzahlen
+\pagenumbering{Roman}
+
+% Anhang
+% *** auskommentieren, wenn nicht verwendet ***
+\appendix
+\input{sections/appendix.tex}
+\clearpage
+
+% --------------------
+% Literaturverzeichnis
+% *** auskommentieren, wenn nicht verwendet ***
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\printbibliography[title=Literaturverzeichnis]
+\clearpage
+
+% --------------------
+% Todo Liste
+% *** in finaler Version auskommentieren ***
+\listoftodos
+
+% --------------------
+% Ende des Dokuments
+\end{document}

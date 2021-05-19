@@ -1,0 +1,58 @@
+% !TeX root = ./six-pager.tex
+
+% Seitenränder
+\usepackage[left= 3cm,right = 3cm, bottom = 3cm, top = 3cm]{geometry}
+
+% Zeilenabstand (singlespacing, onehalfspacing)
+\usepackage[onehalfspacing]{setspace}
+
+%Schriftart
+\usepackage[T1]{fontenc}
+%Schriftarten Paket in die {} einfügen
+\usepackage{}
+
+% Kopf- und Fußzeile
+\usepackage[headsepline=1pt, footsepline=1pt]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\ihead{\Subject}
+\ohead{\Title}
+
+% Todos
+\setlength{\marginparwidth}{2cm}
+\usepackage{todonotes}
+
+% Entfernt eine Fehlermeldung (KOMA-Script)
+\usepackage{scrhack}
+
+% Einfügen von Bildern
+\usepackage{graphicx}
+% Pfad zu den Bildern
+\graphicspath{resources/}
+% Mehrere Bilder/Tabllen in einer Figure erstellen
+\usepackage{subcaption}
+
+% Einfügen von PDF Dateien
+\usepackage{pdfpages}
+
+% Literaturnachweise und -verwaltung
+\usepackage[style = ieee]{biblatex}
+\bibliography{resources/bibliography}{}
+
+% Abkürzungen
+\usepackage[printonlyused]{acronym}
+
+% Deutsche Sprache
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+
+% Links und Hyperlinks
+\usepackage[colorlinks = true,
+            linkcolor = black,
+            urlcolor  = black,
+            citecolor = black]{hyperref}
+
+% Eigenschaften des PDF Dokuments anpassen (Titel, Art der Arbeit, Autor)
+\hypersetup{pdftitle={\Title},
+            pdfsubject={\Subject},
+            pdfauthor={\Author}
+            }
